@@ -11,11 +11,5 @@ jobs:
     runs-on: ubuntu-latest
     name: A job to say hello dir2
     steps:
-    - name: Hello world action step dir2
-      id: hello
-      uses: actions/hello-world-docker-action@v1
-      with:
-        who-to-greet: 'Mona the Octocat dir2'
-    # Use the output from the `hello` step
     - name: Get the output time
       run: echo "The time was dir2 ${{ steps.hello.outputs.time }}"
